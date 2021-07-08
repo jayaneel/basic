@@ -38,7 +38,7 @@ public class LifeCycleServlet implements Servlet {
 	{
 		res.setContentType("text/html");
 		PrintWriter pw = res.getWriter();
-		pw.println("<h2>Initial stage of CICD Project</h2>");
+		pw.println("<h2>Succesfully Completed CICD</h2>");
 		System.out.println("in service");
 	}
 
