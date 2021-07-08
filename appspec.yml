@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: basic-1.war
+  - source: target/basic-1.war
     destination: /opt/apache-tomcat-10.0.8/webapps
 hooks:
   BeforeInstall:
