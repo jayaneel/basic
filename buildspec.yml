@@ -14,3 +14,8 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+artifacts:
+  files:
+    - target/basic-1.war
+    - appspec.yml
+    - scripts/*
