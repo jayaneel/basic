@@ -38,7 +38,7 @@ public class LifeCycleServlet implements Servlet {
 	{
 		res.setContentType("text/html");
 		PrintWriter pw = res.getWriter();
-		pw.println("<h2>Did you recieve notificatons??</h2>");
+		pw.println("<h2>Recieved notificatons :-)</h2>");
 		System.out.println("in service");
 	}
 
