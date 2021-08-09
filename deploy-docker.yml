@@ -17,9 +17,8 @@
     service:
       name: docker
       state: restarted
-  - name: Remove image
-    docker_image:
-      state: present
+  - name: Download image
+    docker_image:      
       name: jayaneel/testing:0.2
       source: pull      
   - name: Launch container
