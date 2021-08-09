@@ -5,12 +5,18 @@
     apt:
       name: python-pip
       state: present
-    
+  - name: Install docker
+    apt:
+      name: docker.io
+      state: present    
   - name: Install docker-py
     pip:
       name: docker-py
       state: present
-
+  - name: Restart docker
+    service:
+      name: docker
+      state: restarted
   - name: Launch container
     docker_container:
       name: prince
