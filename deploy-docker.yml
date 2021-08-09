@@ -3,11 +3,11 @@
   tasks:
   - name: Install pip
     apt:
-      name: python3-pip
+      name: python-pip
       state: present
     
   - name: Install docker-py
-    pip3:
+    pip:
       name: docker-py
       state: present
 
