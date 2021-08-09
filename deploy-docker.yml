@@ -19,10 +19,7 @@
       state: restarted
   - name: Download image
     docker_image:      
-      name: jayaneel/testing
-      tag: 0.2
-      repository: jayaneel/testing:0.2
-      source: pull
+      name: jayaneel/testing:0.2
   - name: Launch container
     docker_container:
       name: prince
