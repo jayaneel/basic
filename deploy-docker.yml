@@ -1,0 +1,19 @@
+- hosts: dev
+  become: yes
+  tasks:
+  - name: Install pip
+    apt:
+      name: python3-pip
+      state: present
+    
+  - name: Install docker-py
+    pip3:
+      name: docker-py
+      state: present
+
+  - name: Launch container
+    docker_container:
+      name: prince
+      image: jayaneel/testing:0.1
+      ports: "8080:8080"
+      state: started
