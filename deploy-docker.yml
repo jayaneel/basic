@@ -7,13 +7,14 @@
       state: present
     
   - name: Install docker-py
-    pip3:
+    pip:
       name: docker-py
       state: present
 
   - name: Launch container
     docker_container:
       name: prince
-      image: jayaneel/testing:0.1
-      ports: "8080:8080"
+      image: "jayaneel/testing:0.1"
+      ports:
+        - 8080:8080
       state: started
