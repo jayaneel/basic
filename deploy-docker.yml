@@ -21,6 +21,6 @@
     docker_container:
       name: prince
       image: jayaneel/testing:0.2
-      ports:
-        - 8080:8080
+      published_ports:
+        - 0.0.0.0:8080:8080
       state: present
