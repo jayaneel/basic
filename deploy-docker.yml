@@ -17,7 +17,11 @@
     service:
       name: docker
       state: restarted
-  - name: Delete existing image
+  - name: remove existing container
+    docker_container:
+      name: prince
+      state: absent    
+  - name: remove existing image
     docker_image:
       name: jayaneel/testing
       state: absent
@@ -29,4 +33,3 @@
       published_ports:
         - 0.0.0.0:8080:8080
       state: started
-      recreate: yes
