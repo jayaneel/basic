@@ -17,11 +17,11 @@
     service:
       name: docker
       state: restarted
-  - name: Download image
-    docker_image:      
-      repository: jayaneel/testing:0.2
-      source: pull
-      force_source: yes
+  - name: Delete existing image
+    docker_image:
+      name: jayaneel/testing
+      state: absent
+      tag: 0.2  
   - name: Launch container
     docker_container:
       name: prince
