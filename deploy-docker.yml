@@ -23,22 +23,13 @@
       state: absent    
   - name: remove existing image
     docker_image:
-      name: testing
+      name: jayaneel/testing
       state: absent
-      tag: 0.2
-  - name: Log into DockerHub
-    docker_login:
-      registry: http://65.1.93.233:8081/repository/princeApp/
-      username: admin
-      password: Prince123
-  - name: pull an image
-    docker_image:
-      name: testing:0.2
-      source: pull
+      tag: 0.2  
   - name: Launch container
     docker_container:
       name: prince
-      image: testing:0.2
+      image: jayaneel/testing:0.2
       published_ports:
         - 0.0.0.0:8080:8080
       state: started
